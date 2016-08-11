@@ -4,4 +4,4 @@ This is the database related to paper '[ForgetMeNot: Memory-Aware Forensic Facia
 
 ![image](http://sketchx.eecs.qmul.ac.uk/wp-content/uploads/sites/27/2016/04/cvpr3-768x623.jpg)
 
-For each image, there are 77 facial landmarks detected by '[stasm](http://www.milbo.users.sonic.net/stasm/)'.
+For each original image, we also provide 77 facial landmarks detected by '[stasm](http://www.milbo.users.sonic.net/stasm/)'.
