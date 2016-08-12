@@ -4,5 +4,5 @@
 3. cal_dist2.m is used to calculate the distance matrix
 4. The features are extracted by [vl_feat](http://www.vlfeat.org/index.html).
 
-This is code is based on the multi-task learning model provided by Edwin Bonilla'[Multi-task Gaussian Process Prediction(NIPS'08)](http://ebonilla.github.io/mtgp/)'.
+The multi-task learning model and related codes used in this project is provided by Edwin Bonilla'[Multi-task Gaussian Process Prediction(NIPS'08)](http://ebonilla.github.io/mtgp/)'.
 
