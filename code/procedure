@@ -1,0 +1,32 @@
+Step1: Data augmentation.
+  input: raw images
+  output: augmented images
+  use: stasm toolbox
+Detect facial landmarks; get the location of two eyes for each image; make the two eyes have the same horizontal location; augment each image based on the distance between two eyes (75 pixels); based on the center of two eyes, crop each image into 256*196.
+
+
+Step2: Feature extraction.
+  input: augmented images
+  output: features
+  use: vl_feat toolbox
+Use vl_feat toolbox to extract HoG features over a regular grid (args: step_size = 16*16), which results in a feature vector of dimension 5,952 for each image.
+
+Step3: Data preparation.
+  input: features
+  output: prepared data
+  run: mtl_data.m
+Divide data into training and testing set. Then prepare data into the specific format according to the requirements of multi-task learning toolbox.
+
+Step4: Model training.
+  input: prepared data
+  output: models and regressed features
+  run: clean_ver.m
+Based on the prepared data in Step3, call multi-task learning toolbox to get the gaussian process regression models. Then regressed features can be obtained according to the learned models.
+
+Step5: Results evaluation.
+  input: regressed features
+  output: distance matrix
+  run: cal_dist2.m
+Calculate the distance matrix.
+
+
